@@ -1,9 +1,12 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: '爬虫demo' });
+    var ret = {
+        title : "注册会员",
+        file_name : "register"
+    };
+    res.render('register', ret);
 });
 
 module.exports = router;

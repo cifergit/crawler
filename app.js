@@ -7,6 +7,12 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var blog = require('./routes/blog');
+var catch_blog = require('./routes/catch_blog');
+var login = require('./routes/login');
+var check_login = require('./routes/check_login');
+var register = require('./routes/register');
+var check_register = require('./routes/check_register');
 
 var app = express();
 
@@ -24,6 +30,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/blog', blog);
+app.use('/catch_blog', catch_blog);
+app.use('/login', login);
+app.use('/check_login', check_login);
+app.use('/register', register);
+app.use('/check_register', check_register);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

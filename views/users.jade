@@ -1,0 +1,15 @@
+extends layout
+
+head
+    link(rel='stylesheet', href='/stylesheets/#{file_name}.css')
+
+block content
+    div.main_wrap 查看全部用户
+
+    -if(user_list)
+        each user in user_list
+            if(user)
+                each val,key in user
+                    p
+                       !{key} : !{val}
+                p(style="border-bottom:1px solid #ccc")

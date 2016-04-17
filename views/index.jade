@@ -3,3 +3,10 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  p 你可以在这里抓取博客信息
+  p
+    已是会员？进行
+    a(href="/login") 登录
+  p
+    否则
+    a(href="/register") 注册一个吧
